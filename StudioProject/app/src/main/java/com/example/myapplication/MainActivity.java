@@ -12,9 +12,12 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    public static TextView num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        num = (TextView) findViewById(R.id.textview_first);
+
     }
 
     @Override
@@ -52,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ping(View view){
+        num = (TextView) findViewById(R.id.textview_first);
+        MainActivity.num.setText(R.string.hello_first_fragment);
     }
 }
