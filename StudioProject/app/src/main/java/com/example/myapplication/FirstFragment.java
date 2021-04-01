@@ -27,7 +27,6 @@ public class FirstFragment extends Fragment {
 
     }
 
-    public void ping (View view){
-        MainActivity.num.setText(R.string.test);
+    public void ping(View view) {
     }
 }
